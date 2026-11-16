@@ -34,7 +34,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
     origin: [
         "http://localhost:5173",
-        "https://portfolio-caym.onrender.com"
+        "https://portfolio-ux6l-9qn3qyl8q-shruti21.vercel.app"
     ],
     credentials: true
 }));
