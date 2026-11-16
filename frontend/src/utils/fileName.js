@@ -1,7 +1,7 @@
 export const getAssetUrl = (fileUrl) => {
   if (!fileUrl || /^(https?:|blob:|data:)/i.test(fileUrl)) return fileUrl;
 
-  const apiUrl = import.meta.env.VITE_API_URL?.replace(/\/+$/, '');
+  const apiUrl = (import.meta.env.VITE_API_URL || 'https://portfolio-caym.onrender.com/api').replace(/\/+$/, '');
   const assetBaseUrl = apiUrl?.replace(/\/api$/, '');
   if (!assetBaseUrl) return fileUrl;
 
