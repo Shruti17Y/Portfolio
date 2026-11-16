@@ -127,10 +127,10 @@ export const AdminLogin = () => {
           </form>
 
           {/* Quick Demo Credentials helper */}
-          <div className="p-3.5 rounded-xl bg-zinc-50 border border-zinc-100 text-xs text-zinc-600 space-y-1 text-center">
+          {/* <div className="p-3.5 rounded-xl bg-zinc-50 border border-zinc-100 text-xs text-zinc-600 space-y-1 text-center">
             <p className="font-semibold text-zinc-900">Default Credentials:</p>
             <p className="font-mono text-[11px] text-zinc-700">Username: <span className="font-bold">admin</span> &bull; Password: <span className="font-bold">Admin@123</span></p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
