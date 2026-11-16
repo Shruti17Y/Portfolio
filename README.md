@@ -1,7 +1,5 @@
 # Shruti Patel | Full Stack Developer Portfolio
 
-![Portfolio preview](https://portfolio-ux6l.vercel.app/favicon.svg)
-
 A responsive developer portfolio and content management system built for **Shruti Patel**, a Full Stack Developer. The public website presents professional experience, technical skills, projects, education, contact information, profile photography, and a downloadable resume. A protected admin panel provides full content management without editing source code.
 
 ## Live Website
