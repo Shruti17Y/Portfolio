@@ -1,7 +1,3 @@
-# Uploaded files
-backend/uploads/*
-!backend/uploads/.gitkeep
-
 # Dependencies
 node_modules/
 venv/
