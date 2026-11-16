@@ -31,13 +31,24 @@ const PORT = process.env.PORT || 5000;
 //   origin: true,
 //   credentials: true
 // }));
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://portfolio-ux6l-81abbxsdr-shruti21.vercel.app",
+  "https://portfolio-ux6l-9qn3qyl8q-shruti21.vercel.app"
+];
+
 app.use(cors({
-    origin: [
-        "http://localhost:5173",
-        "https://portfolio-ux6l-9qn3qyl8q-shruti21.vercel.app"
-    ],
-    credentials: true
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error(`CORS blocked for origin: ${origin}`));
+    }
+  },
+  credentials: true
 }));
+
 // Body parsers
 app.use(express.json({ limit: '20mb' }));
 app.use(express.urlencoded({ extended: true, limit: '20mb' }));

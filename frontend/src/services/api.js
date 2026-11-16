@@ -60,7 +60,7 @@ export const api = {
   login: (credentials) =>
     fetch(`${BASE_URL}/api/auth/login`, {
       method: 'POST',
-      headers: getHeaders(),
+      headers: getHeaders(),R
       body: JSON.stringify(credentials),
     }).then(handleResponse),
 
