@@ -57,6 +57,28 @@ app.use(express.urlencoded({ extended: true, limit: '20mb' }));
 
 // Serve static uploaded files
 const uploadsPath = path.join(__dirname, '../uploads');
+app.use('/uploads', (req, res, next) => {
+  const requestedFile = path.basename(req.path);
+  const requestedPath = path.join(uploadsPath, requestedFile);
+
+  if (fs.existsSync(requestedPath)) {
+    return next();
+  }
+
+  // Uploaded filenames include a generated numeric prefix. If a database
+  // record points to an old prefix, reuse the tracked file with the same
+  // original filename instead of returning a broken image.
+  const originalName = requestedFile.replace(/^\d+-\d+-/, '');
+  const fallbackFile = fs.readdirSync(uploadsPath).find((file) => (
+    file.replace(/^\d+-\d+-/, '') === originalName
+  ));
+
+  if (fallbackFile) {
+    req.url = `/${fallbackFile}`;
+  }
+
+  next();
+});
 app.use('/uploads', express.static(uploadsPath));
 
 // Health check
