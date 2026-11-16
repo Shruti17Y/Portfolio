@@ -1,4 +1,7 @@
-const BASE_URL = import.meta.env.VITE_API_URL || '';
+const API_URL = import.meta.env.VITE_API_URL || 'https://portfolio-caym.onrender.com/api';
+const BASE_URL = API_URL.endsWith('/api') ? API_URL.slice(0, -4) : API_URL;
+
+export default API_URL;
 
 const getHeaders = (isFormData = false) => {
   const token = localStorage.getItem('admin_token');
