@@ -32,12 +32,14 @@ const PORT = process.env.PORT || 5000;
 //   credentials: true
 // }));
 
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://portfolio-ux6l-81abbxsdr-shruti21.vercel.app",
-  "https://portfolio-ux6l-9qn3qyl8q-shruti21.vercel.app"
-];
 
+
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://portfolio-ux6l.vercel.app',
+  'https://portfolio-ux6l-81abbxsdr-shruti21.vercel.app',
+  'https://portfolio-ux6l-9qn3qyl8q-shruti21.vercel.app',
+];
 app.use(cors({
   origin: (origin, callback) => {
     if (!origin || allowedOrigins.includes(origin)) {
