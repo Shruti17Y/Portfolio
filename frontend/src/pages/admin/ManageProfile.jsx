@@ -164,7 +164,7 @@ export const ManageProfile = () => {
               <div className="w-20 h-20 rounded-2xl border border-zinc-200 bg-zinc-50 overflow-hidden flex items-center justify-center flex-shrink-0">
                 {profile.profile_image ? (
                   <img
-                    src={profile.profile_image}
+                    src={getAssetUrl(profile.profile_image)}
                     alt="Profile"
                     className="w-full h-full object-cover"
                   />

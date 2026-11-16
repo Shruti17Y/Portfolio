@@ -133,7 +133,7 @@ export const Hero = ({ profile, settings }) => {
               <div className="w-full h-full rounded-2xl overflow-hidden bg-white border border-zinc-700 flex items-center justify-center">
                 {profile?.profile_image ? (
                   <img
-                    src={profile.profile_image}
+                    src={getAssetUrl(profile.profile_image)}
                     alt={name}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />

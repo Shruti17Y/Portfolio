@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink, FolderGit2, Star } from 'lucide-react';
 import { Github } from './BrandIcons';
+import { getAssetUrl } from '../utils/fileName';
 
 export const Projects = ({ projects = [] }) => {
   return (
@@ -37,7 +38,7 @@ export const Projects = ({ projects = [] }) => {
                 <div className="h-48 sm:h-52 bg-zinc-50 border-b border-zinc-100 relative overflow-hidden flex items-center justify-center">
                   {project.image_url ? (
                     <img
-                      src={project.image_url}
+                      src={getAssetUrl(project.image_url)}
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />

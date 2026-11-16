@@ -3,6 +3,7 @@ import { api } from '../../services/api';
 import { Toast } from '../../components/Toast';
 import { ConfirmModal } from '../../components/ConfirmModal';
 import { Github } from '../../components/BrandIcons';
+import { getAssetUrl } from '../../utils/fileName';
 import {
   FolderGit2,
   Plus,
@@ -250,7 +251,7 @@ export const ManageProjects = () => {
               <div className="h-40 bg-zinc-50 border-b border-zinc-100 relative overflow-hidden flex items-center justify-center">
                 {proj.image_url ? (
                   <img
-                    src={proj.image_url}
+                    src={getAssetUrl(proj.image_url)}
                     alt={proj.title}
                     className="w-full h-full object-cover"
                   />
