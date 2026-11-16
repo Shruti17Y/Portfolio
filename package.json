@@ -1,0 +1,14 @@
+{
+  "name": "shruti-patel-portfolio",
+  "version": "1.0.0",
+  "description": "Full Stack Developer Portfolio with Dynamic Admin Panel and PostgreSQL",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "seed": "cd backend && npm run seed"
+  },
+  "author": "Shruti Patel",
+  "license": "ISC"
+}

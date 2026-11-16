@@ -1,0 +1,21 @@
+# Uploaded files
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Build files
+dist/
+build/
+
+# Python cache
+__pycache__/
+*.pyc
